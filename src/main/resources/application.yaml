@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
 
 spring:
   application:
-    name: re-shopping-cart-web-app
+    name: ${SPRING_APPLICATION_NAME:re-shopping-cart-web-app}
 
   profiles:
     active: prod # Production development
@@ -21,8 +21,8 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: none
-    show-sql: false
+      ddl-auto: ${JPA_DDL_AUTO:none}
+    show-sql: ${JPA_SHOW_SQL:false}
 
   thymeleaf:
-    cache: false
+    cache: ${THYMELEAF_CACHE:false}
