@@ -21,8 +21,6 @@ bin/
 
 # Gradle
 .gradle
-gradlew
-gradlew.bat
 build/
 !build/libs/*.jar
 
